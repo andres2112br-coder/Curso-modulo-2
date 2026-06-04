@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> Formulario Avanzado con Validaciones</title>
+  <link rel="stylesheet" href="./Examen.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav" aria-label="Navegación principal">
+      <div class="nav__brand">SitioWeb</div>
+
+      <button class="nav__toggle" type="button" aria-label="Abrir menú" onclick="this.classList.toggle('is-open');">☰</button>
+
+      <ul class="nav__list">
+        <li class="nav__item"><a class="nav__link" href="#inicio">Inicio</a></li>
+
+        <li class="nav__item nav__dropdown">
+          <a class="nav__link" href="#servicios">Servicios</a>
+          <ul class="nav__submenu">
+            <li class="nav__submenu-item"><a class="nav__submenu-link" href="#web">Desarrollo Web</a></li>
+            <li class="nav__submenu-item"><a class="nav__submenu-link" href="#apps">Apps</a></li>
+            <li class="nav__submenu-item"><a class="nav__submenu-link" href="#seo">SEO</a></li>
+          </ul>
+        </li>
+
+        <li class="nav__item"><a class="nav__link" href="#portafolio">Portafolio</a></li>
+        <li class="nav__item"><a class="nav__link" href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Formulario Avanzado con Validaciones</h1>
+    <p>Campos con <strong>HTML5</strong> y retroalimentación visual con <code>:valid</code> / <code>:invalid</code>.</p>
+
+    <section class="form-section" aria-labelledby="form-title">
+      <h2 id="form-title">Formulario</h2>
+
+      <form class="form-grid" action="#" method="post">
+        <label class="field">
+          <span>Nombre</span>
+          <input
+            class="form-control"
+            type="text"
+            name="nombre"
+            required
+            pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,40}"
+            placeholder="Tu nombre"
+          />
+        </label>
+
+        <label class="field">
+          <span>Email</span>
+          <input
+            class="form-control"
+            type="email"
+            name="email"
+            required
+            placeholder="tu@email.com"
+          />
+        </label>
+
+        <label class="field">
+          <span>Teléfono</span>
+          <input
+            class="form-control"
+            type="text"
+            name="telefono"
+            required
+            pattern="[0-9]{9,15}"
+            placeholder="Ej: 04141234567"
+          />
+        </label>
+
+        <label class="field">
+          <span>Contraseña</span>
+          <input
+            class="form-control"
+            type="password"
+            name="password"
+            required
+            pattern="(?=.{8,})(?=.*[A-Z])(?=.*\d).+"
+            placeholder="Mínimo 8, al menos 1 mayúscula y 1 número"
+          />
+        </label>
+
+        <label class="field full">
+          <span>Mensaje</span>
+          <textarea
+            class="form-control"
+            name="mensaje"
+            required
+            minlength="10"
+            maxlength="300"
+            placeholder="Contame algo papi..."
+          ></textarea>
+        </label>
+
+        <div class="actions">
+          <button class="btn" type="submit">Enviar</button>
+          <p class="hint">Tip: los bordes cambian según si el campo cumple con las reglas.</p>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
+

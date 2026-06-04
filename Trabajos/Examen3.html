@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Galería de imágenes asimétrica estilo Pinterest usando CSS column-count." />
+  <title>Galería Masonry (Pinterest)</title>
+  <link rel="stylesheet" href="./Examen.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav" aria-label="Navegación principal">
+      <div class="nav__brand">SitioWeb</div>
+
+      <!-- El toggle ahora activa la clase en el <nav> completo, no en sí mismo -->
+      <button
+        class="nav__toggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="nav-list"
+        onclick="
+          const nav = this.closest('.nav');
+          const isOpen = nav.classList.toggle('is-open');
+          this.setAttribute('aria-expanded', isOpen);
+          this.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+        "
+      >
+        <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect y="4"  width="22" height="2" rx="1" fill="currentColor"/>
+          <rect y="10" width="22" height="2" rx="1" fill="currentColor"/>
+          <rect y="16" width="22" height="2" rx="1" fill="currentColor"/>
+        </svg>
+      </button>
+
+      <ul class="nav__list" id="nav-list" role="list">
+        <li class="nav__item"><a class="nav__link" href="#inicio">Inicio</a></li>
+        <li class="nav__item"><a class="nav__link" href="#galeria">Galería</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page">
+    <h1 class="page__title" id="inicio">Galería asimétrica estilo Pinterest</h1>
+    <p class="page__subtitle">Uso de <strong>column-count</strong>, <strong>column-gap</strong>, y tarjetas con <code>break-inside: avoid</code>.</p>
+
+    <section class="gallery" id="galeria" aria-label="Galería de imágenes">
+
+      <figure class="card">
+        <img
+          src="https://images.unsplash.com/photo-1759565434188-af30e594a13e?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Naturaleza con luz dorada entre los árboles"
+          width="1200"
+          loading="eager"
+        />
+        <figcaption class="overlay">
+          <span class="overlay__title">Naturaleza</span>
+          <span class="overlay__tag">Paisaje</span>
+        </figcaption>
+      </figure>
+
+      <figure class="card">
+        <img
+          src="https://images.unsplash.com/photo-1551369227-ed33a297f86c?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Ciudad iluminada de noche"
+          width="1200"
+          loading="lazy"
+        />
+        <figcaption class="overlay">
+          <span class="overlay__title">Ciudad</span>
+          <span class="overlay__tag">Nocturno</span>
+        </figcaption>
+      </figure>
+
+      <figure class="card">
+        <img
+          src="https://images.unsplash.com/photo-1763378578991-575a66288bc0?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Cadena montañosa con cielo despejado"
+          width="1200"
+          loading="lazy"
+        />
+        <figcaption class="overlay">
+          <span class="overlay__title">Montañas</span>
+          <span class="overlay__tag">Viaje</span>
+        </figcaption>
+      </figure>
+
+      <figure class="card">
+        <img
+          src="https://images.unsplash.com/photo-1698136096134-252d5e166cfe?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Taza de café junto a libros abiertos"
+          width="1200"
+          loading="lazy"
+        />
+        <figcaption class="overlay">
+          <span class="overlay__title">Rutina</span>
+          <span class="overlay__tag">Café</span>
+        </figcaption>
+      </figure>
+
+      <figure class="card">
+        <img
+          src="https://thumbs.dreamstime.com/b/manos-dando-forma-la-creatividad-con-arcilla-el-artesano-moldea-en-vasos-%C3%BAnicos-medio-de-un-espacio-trabajo-tranquilo-generado-382736013.jpg?w=576"
+          alt="Manos trabajando de forma creativa"
+          width="1200"
+          loading="lazy"
+        />
+        <figcaption class="overlay">
+          <span class="overlay__title">Trabajo</span>
+          <span class="overlay__tag">Creatividad</span>
+        </figcaption>
+      </figure>
+
+      <figure class="card">
+        <img
+          src="https://thumbs.dreamstime.com/b/vista-panor%C3%A1mica-de-la-costa-penang-con-mar-en-calma-barcos-horizonte-y-tropical-420830881.jpg?w=992"
+          alt="Vista panorámica del mar en calma"
+          width="1200"
+          loading="lazy"
+        />
+        <figcaption class="overlay">
+          <span class="overlay__title">Mar</span>
+          <span class="overlay__tag">Verano</span>
+        </figcaption>
+      </figure>
+
+      <figure class="card">
+        <img
+          src="https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&w=1200&q=70"
+          alt="Cielo azul con nubes blancas esponjosas"
+          width="1200"
+          loading="lazy"
+        />
+        <figcaption class="overlay">
+          <span class="overlay__title">Cielo</span>
+          <span class="overlay__tag">Nubes</span>
+        </figcaption>
+      </figure>
+
+      <figure class="card">
+        <img
+          src="https://i.pinimg.com/1200x/b7/70/f1/b770f1e66b4918e323b4cd6c92ceda1f.jpg"
+          alt="Atardecer con cielo anaranjado y rosado"
+          width="1200"
+          loading="lazy"
+        />
+        <figcaption class="overlay">
+          <span class="overlay__title">Atardecer</span>
+          <span class="overlay__tag">Color</span>
+        </figcaption>
+      </figure>
+
+      <figure class="card">
+        <img
+          src="https://thumbs.dreamstime.com/b/edificio-de-arquitectura-moderna-blanca-con-l%C3%ADneas-curvas-y-formas-geom%C3%A9tricas-dise%C3%B1o-contempor%C3%A1neo-423385419.jpg?w=992"
+          alt="Edificio de arquitectura moderna con líneas geométricas"
+          width="1200"
+          loading="lazy"
+        />
+        <figcaption class="overlay">
+          <span class="overlay__title">Arquitectura</span>
+          <span class="overlay__tag">Líneas</span>
+        </figcaption>
+      </figure>
+
+    </section>
+  </main>
+</body>
+</html>

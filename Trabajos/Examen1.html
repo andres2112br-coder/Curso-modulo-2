@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ejercicio 1: Menú Responsive con Dropdown</title>
+  <link rel="stylesheet" href="./Examen.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav" aria-label="Navegación principal">
+      <div class="nav__brand">SitioWeb</div>
+      
+      <button class="nav__toggle" type="button" aria-label="Abrir menú" onclick="this.classList.toggle('is-open');">☰</button>
+
+      <ul class="nav__list">
+        <li class="nav__item"><a class="nav__link" href="#inicio">Inicio</a></li>
+
+        <li class="nav__item nav__dropdown">
+          <a class="nav__link" href="#servicios">Servicios</a>
+          <ul class="nav__submenu">
+            <li class="nav__submenu-item"><a class="nav__submenu-link" href="#web">Desarrollo Web</a></li>
+            <li class="nav__submenu-item"><a class="nav__submenu-link" href="#apps">Apps</a></li>
+            <li class="nav__submenu-item"><a class="nav__submenu-link" href="#seo">SEO</a></li>
+          </ul>
+        </li>
+
+        <li class="nav__item"><a class="nav__link" href="#portafolio">Portafolio</a></li>
+        <li class="nav__item"><a class="nav__link" href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Menú Responsive con Dropdown</h1>
+    <p>En escritorio, al pasar el mouse (hover) se abre el submenú.</p>
+    <p>En celular, el menú se muestra en columna y el submenú se adapta.</p>
+  </main>
+</body>
+</html>
+
