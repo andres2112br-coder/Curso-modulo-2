@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora Científica</title>
+  <link rel="stylesheet" href="calculator.css" />
+</head>
+<body>
+  <main class="calculator">
+    <header>
+      <h1>Calculadora Científica</h1>
+    </header>
+
+    <section class="display-panel">
+      <div id="equation" class="equation">0</div>
+      <input id="display" class="display" type="text" readonly value="0" />
+    </section>
+
+    <section class="buttons-grid">
+      <button class="btn function" data-action="clear">C</button>
+      <button class="btn function" data-action="delete">DEL</button>
+      <button class="btn function" data-action="toggle-sign">±</button>
+      <button class="btn operator" data-value="/">÷</button>
+
+      <button class="btn function" data-action="sqrt">√</button>
+      <button class="btn function" data-action="power">xʸ</button>
+      <button class="btn function" data-action="square">x²</button>
+      <button class="btn operator" data-value="*">×</button>
+
+      <button class="btn function" data-action="sin">sin</button>
+      <button class="btn function" data-action="cos">cos</button>
+      <button class="btn function" data-action="tan">tan</button>
+      <button class="btn operator" data-value="-">−</button>
+
+      <button class="btn function" data-action="asin">asin</button>
+      <button class="btn function" data-action="acos">acos</button>
+      <button class="btn function" data-action="atan">atan</button>
+      <button class="btn operator" data-value="+">+</button>
+
+      <button class="btn function" data-action="ln">ln</button>
+      <button class="btn function" data-action="log10">log</button>
+      <button class="btn number" data-value="7">7</button>
+      <button class="btn number" data-value="8">8</button>
+
+      <button class="btn number" data-value="9">9</button>
+      <button class="btn function" data-action="percent">%</button>
+      <button class="btn number" data-value="4">4</button>
+      <button class="btn number" data-value="5">5</button>
+
+      <button class="btn number" data-value="6">6</button>
+      <button class="btn function" data-action="pi">π</button>
+      <button class="btn number" data-value="1">1</button>
+      <button class="btn number" data-value="2">2</button>
+
+      <button class="btn number" data-value="3">3</button>
+      <button class="btn function" data-action="e">e</button>
+      <button class="btn number" data-value="0">0</button>
+      <button class="btn number" data-value=".">.</button>
+
+      <button class="btn function" data-action="factorial">n!</button>
+      <button class="btn function" data-action="exp">exp</button>
+      <button class="btn equal" data-action="calculate">=</button>
+    </section>
+  </main>
+
+  <script src="calculator.js"></script>
+</body>
+</html>
